@@ -1,0 +1,51 @@
+# ESLint configuration
+# http://eslint.org/docs/user-guide/configuring
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb-standard",
+  "globals": {
+    "__DEV__": "true"
+  },
+  "env": {
+    "node": "true",
+    "es6": "true",
+    "browser": "true"
+  },
+  "rules": {
+    "import/extensions": [
+      "error",
+      "always",
+      {
+        "js": "never",
+        "jsx": "never",
+        "mjs": "never"
+      }
+    ],
+    "import/no-extraneous-dependencies": "off",
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn", "error", "info"]
+      }
+    ],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+         ".js",
+         ".jsx"
+       ]
+      }
+    ],
+    "react/prefer-stateless-function": "off",
+    "react/jsx-no-bind": "off",
+    "react/forbid-prop-types": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src"]
+      }
+    }
+  }
+}
